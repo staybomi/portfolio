@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>박서영 · Frontend Developer 포트폴리오</title>
+
+  <!-- SEO -->
+  <meta name="description" content="사용자 경험을 코드로 구현하는 프론트엔드 개발자 박서영의 자기소개와 포트폴리오. 프로젝트, 기술 스택, 연락처를 한눈에 확인하세요." />
+  <meta name="author" content="박서영" />
+  <meta name="keywords" content="프론트엔드 개발자, Frontend Developer, 포트폴리오, React, TypeScript, 웹 개발, 박서영" />
+  <meta name="theme-color" content="#0b0d17" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="박서영 · Frontend Developer 포트폴리오" />
+  <meta property="og:description" content="사용자 경험을 코드로 구현하는 프론트엔드 개발자 박서영의 자기소개와 포트폴리오." />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:site_name" content="박서영 포트폴리오" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="박서영 · Frontend Developer 포트폴리오" />
+  <meta name="twitter:description" content="사용자 경험을 코드로 구현하는 프론트엔드 개발자 박서영의 자기소개와 포트폴리오." />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👩‍💻</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Skip link (접근성) -->
+  <a href="#home" class="skip-link">본문으로 건너뛰기</a>
+
+  <!-- Mouse particle canvas (전역) -->
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ============ GNB ============ -->
+  <header class="gnb" id="gnb">
+    <nav class="nav container" aria-label="주요 메뉴">
+      <a href="#home" class="nav__logo" aria-label="홈으로 이동">
+        <span class="nav__logo-mark">SY</span>
+        <span class="nav__logo-text">박서영</span>
+      </a>
+
+      <button class="nav__toggle" id="nav-toggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#home" class="nav__link is-active" data-nav>홈</a></li>
+        <li><a href="#portfolio" class="nav__link" data-nav>포트폴리오</a></li>
+        <li><a href="#about" class="nav__link" data-nav>자기소개</a></li>
+        <li><a href="#contact" class="nav__link" data-nav>연락처</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ HOME / HERO ============ -->
+    <section class="hero section" id="home">
+      <div class="hero__bg" aria-hidden="true">
+        <span class="hero__orb hero__orb--1"></span>
+        <span class="hero__orb hero__orb--2"></span>
+        <span class="hero__orb hero__orb--3"></span>
+      </div>
+
+      <div class="container hero__inner">
+        <p class="hero__eyebrow reveal" data-reveal>👋 안녕하세요, 반갑습니다</p>
+        <h1 class="hero__title reveal" data-reveal data-reveal-delay="80">
+          사용자 경험을 <span class="grad-text">코드로</span> 구현하는<br />
+          프론트엔드 개발자 <span class="grad-text">박서영</span>입니다
+        </h1>
+        <p class="hero__role reveal" data-reveal data-reveal-delay="160">
+          Frontend Developer · UI Engineer · 5년차
+        </p>
+
+        <ul class="hero__keywords reveal" data-reveal data-reveal-delay="240" aria-label="핵심 키워드">
+          <li>React</li>
+          <li>TypeScript</li>
+          <li>접근성</li>
+          <li>디자인 시스템</li>
+          <li>성능 최적화</li>
+        </ul>
+
+        <div class="hero__cta reveal" data-reveal data-reveal-delay="320">
+          <a href="#portfolio" class="btn btn--primary">포트폴리오 보기</a>
+          <a href="#contact" class="btn btn--ghost">연락하기</a>
+        </div>
+
+        <dl class="hero__stats reveal" data-reveal data-reveal-delay="400">
+          <div><dt>5+</dt><dd>년 경력</dd></div>
+          <div><dt>30+</dt><dd>완료 프로젝트</dd></div>
+          <div><dt>99</dt><dd>Lighthouse 점수</dd></div>
+        </dl>
+      </div>
+
+      <a href="#portfolio" class="hero__scroll" aria-label="아래로 스크롤">
+        <span class="hero__scroll-mouse"></span>
+        <span class="hero__scroll-text">Scroll</span>
+      </a>
+    </section>
+
+    <!-- ============ PORTFOLIO ============ -->
+    <section class="section portfolio" id="portfolio">
+      <div class="container">
+        <header class="section__head reveal" data-reveal>
+          <span class="section__tag">Portfolio</span>
+          <h2 class="section__title">대표 프로젝트</h2>
+          <p class="section__desc">문제 정의부터 출시·성과까지, 직접 만들고 책임진 작업물입니다.</p>
+        </header>
+
+        <div class="portfolio__grid" id="portfolio-grid">
+          <!-- 카드는 script.js의 데이터로 렌더링됩니다 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about">
+      <div class="container about__inner">
+        <header class="section__head reveal" data-reveal>
+          <span class="section__tag">About</span>
+          <h2 class="section__title">자기소개</h2>
+          <p class="section__desc">어떤 사람이고, 어떻게 일하는지 소개합니다.</p>
+        </header>
+
+        <div class="about__grid">
+          <div class="about__bio reveal" data-reveal>
+            <p>
+              안녕하세요. 5년간 스타트업과 중견 기업에서 사용자가 매일 쓰는 웹 서비스를
+              만들어 온 프론트엔드 개발자 <strong>박서영</strong>입니다.
+            </p>
+            <p>
+              저는 <strong>"보이지 않는 디테일이 신뢰를 만든다"</strong>고 믿습니다.
+              0.1초의 응답성, 1px의 정렬, 키보드만으로도 완결되는 흐름까지 챙기며
+              디자이너·백엔드와 긴밀히 협업해 제품을 완성합니다.
+            </p>
+            <p>
+              복잡한 요구사항을 구조화하고, 재사용 가능한 컴포넌트와 디자인 시스템으로
+              팀의 개발 속도를 끌어올리는 일에 가장 큰 보람을 느낍니다.
+            </p>
+
+            <div class="about__values">
+              <div class="about__value">
+                <span class="about__value-ico">🎯</span>
+                <h3>사용자 중심</h3>
+                <p>데이터와 사용성 테스트로 의사결정을 검증합니다.</p>
+              </div>
+              <div class="about__value">
+                <span class="about__value-ico">⚡</span>
+                <h3>성능 집착</h3>
+                <p>Core Web Vitals와 60fps를 기준선으로 둡니다.</p>
+              </div>
+              <div class="about__value">
+                <span class="about__value-ico">🤝</span>
+                <h3>협업 지향</h3>
+                <p>문서화와 코드 리뷰로 함께 성장하는 팀을 만듭니다.</p>
+              </div>
+            </div>
+          </div>
+
+          <aside class="about__side">
+            <div class="about__card reveal" data-reveal>
+              <h3 class="about__card-title">보유 기술</h3>
+              <div class="skills">
+                <div class="skill">
+                  <div class="skill__head"><span>React / Next.js</span><span>95%</span></div>
+                  <div class="skill__bar"><i style="--lvl:95%"></i></div>
+                </div>
+                <div class="skill">
+                  <div class="skill__head"><span>TypeScript</span><span>90%</span></div>
+                  <div class="skill__bar"><i style="--lvl:90%"></i></div>
+                </div>
+                <div class="skill">
+                  <div class="skill__head"><span>CSS / 디자인 시스템</span><span>92%</span></div>
+                  <div class="skill__bar"><i style="--lvl:92%"></i></div>
+                </div>
+                <div class="skill">
+                  <div class="skill__head"><span>접근성 (a11y)</span><span>85%</span></div>
+                  <div class="skill__bar"><i style="--lvl:85%"></i></div>
+                </div>
+                <div class="skill">
+                  <div class="skill__head"><span>Node.js / API</span><span>78%</span></div>
+                  <div class="skill__bar"><i style="--lvl:78%"></i></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="about__card reveal" data-reveal data-reveal-delay="120">
+              <h3 class="about__card-title">경력 &amp; 학력</h3>
+              <ol class="timeline">
+                <li>
+                  <span class="timeline__date">2023 – 현재</span>
+                  <h4>토스 · Frontend Developer</h4>
+                  <p>핵심 결제 플로우 리뉴얼, 공통 컴포넌트 라이브러리 구축.</p>
+                </li>
+                <li>
+                  <span class="timeline__date">2021 – 2023</span>
+                  <h4>당근마켓 · UI Engineer</h4>
+                  <p>웹 채팅·검색 화면 성능 40% 개선, 디자인 시스템 도입.</p>
+                </li>
+                <li>
+                  <span class="timeline__date">2019 – 2021</span>
+                  <h4>스타트업 · 주니어 개발자</h4>
+                  <p>0→1 제품의 웹 프론트엔드 전반을 단독 개발.</p>
+                </li>
+                <li>
+                  <span class="timeline__date">2015 – 2019</span>
+                  <h4>OO대학교 · 컴퓨터공학 학사</h4>
+                  <p>HCI 연구실, 졸업 프로젝트 우수상.</p>
+                </li>
+              </ol>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <header class="section__head reveal" data-reveal>
+          <span class="section__tag">Contact</span>
+          <h2 class="section__title">함께 일해요</h2>
+          <p class="section__desc">채용 제안이나 협업 문의를 언제든 환영합니다. 1~2일 내 회신드립니다.</p>
+        </header>
+
+        <div class="contact__grid">
+          <div class="contact__info reveal" data-reveal>
+            <a class="contact__item" href="mailto:staybomi@gmail.com">
+              <span class="contact__ico">✉️</span>
+              <span>
+                <strong>Email</strong>
+                staybomi@gmail.com
+              </span>
+            </a>
+            <a class="contact__item" href="tel:+821012345678">
+              <span class="contact__ico">📞</span>
+              <span>
+                <strong>Phone</strong>
+                010-1234-5678
+              </span>
+            </a>
+            <div class="contact__socials">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+              <a href="https://velog.io" target="_blank" rel="noopener noreferrer" aria-label="기술 블로그">Blog</a>
+            </div>
+            <a class="btn btn--ghost contact__resume" href="#" download>📄 이력서 PDF 다운로드</a>
+          </div>
+
+          <form class="contact__form reveal" data-reveal data-reveal-delay="120" id="contact-form" novalidate>
+            <div class="field">
+              <label for="name">이름 <span aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" autocomplete="name" required placeholder="홍길동" />
+              <small class="field__error" data-error-for="name"></small>
+            </div>
+            <div class="field">
+              <label for="email">이메일 <span aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" required placeholder="recruiter@company.com" />
+              <small class="field__error" data-error-for="email"></small>
+            </div>
+            <div class="field">
+              <label for="message">메시지 <span aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" rows="5" required placeholder="제안하실 포지션이나 문의 내용을 적어주세요."></textarea>
+              <small class="field__error" data-error-for="message"></small>
+            </div>
+            <button type="submit" class="btn btn--primary contact__submit">메시지 보내기</button>
+            <p class="contact__success" id="contact-success" role="status" hidden>
+              ✅ 메시지가 준비되었습니다. 메일 앱이 열리면 전송해 주세요!
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> 박서영. Built with care &amp; vanilla JS.</p>
+      <a href="#home" class="footer__top" aria-label="맨 위로">↑ Top</a>
+    </div>
+  </footer>
+
+  <!-- Portfolio detail modal -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__panel" role="document">
+      <button class="modal__close" aria-label="닫기" data-close-modal>×</button>
+      <div class="modal__body" id="modal-body"><!-- JS로 채워짐 --></div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
