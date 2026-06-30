@@ -143,15 +143,12 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   letter-spacing: -0.02em;
 }
 .nav__logo-mark {
-  display: grid;
-  place-items: center;
+  display: block;
   width: 36px;
   height: 36px;
   border-radius: 10px;
+  object-fit: cover;
   background: var(--grad);
-  color: #fff;
-  font-size: 14px;
-  font-family: "Inter", sans-serif;
   box-shadow: var(--shadow-glow);
 }
 .nav__logo-text { font-size: 17px; }
