@@ -134,8 +134,10 @@
               복잡한 요구사항을 구조화하고, 재사용 가능한 컴포넌트와 디자인 시스템으로
               팀의 개발 속도를 끌어올리는 일에 가장 큰 보람을 느낍니다.
             </p>
+          </div>
 
-            <div class="about__values">
+          <aside class="about__side">
+            <div class="about__values reveal" data-reveal>
               <div class="about__value">
                 <span class="about__value-ico">🎯</span>
                 <h3>사용자 중심</h3>
@@ -147,18 +149,16 @@
                 <p>문서화와 코드 리뷰로 함께 성장하는 팀을 만듭니다.</p>
               </div>
             </div>
-          </div>
-
-          <aside class="about__side">
             <div class="about__card reveal" data-reveal>
               <h3 class="about__card-title">보유 기술</h3>
-              <div class="skills">
-                <div class="skill"><span>React / Next.js</span></div>
-                <div class="skill"><span>TypeScript</span></div>
-                <div class="skill"><span>CSS / 디자인 시스템</span></div>
-                <div class="skill"><span>접근성 (a11y)</span></div>
-                <div class="skill"><span>Node.js / API</span></div>
-              </div>
+              <ul class="skills">
+                <li class="skill-card">React</li>
+                <li class="skill-card">Next.js</li>
+                <li class="skill-card">JavaScript</li>
+                <li class="skill-card">TypeScript</li>
+                <li class="skill-card">HTML</li>
+                <li class="skill-card">CSS</li>
+              </ul>
             </div>
           </aside>
         </div>
@@ -183,19 +183,16 @@
                 staybomi@gmail.com
               </span>
             </a>
-            <a class="contact__item" href="tel:+821012345678">
-              <span class="contact__ico">📞</span>
-              <span>
-                <strong>Phone</strong>
-                010-1234-5678
-              </span>
-            </a>
             <div class="contact__socials">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
-              <a href="https://velog.io" target="_blank" rel="noopener noreferrer" aria-label="기술 블로그">Blog</a>
+              <a href="https://github.com/staybomi" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <svg class="contact__social-ico" viewBox="0 0 16 16" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                GitHub
+              </a>
+              <a href="https://seokachu.tistory.com" target="_blank" rel="noopener noreferrer" aria-label="기술 블로그">
+                <svg class="contact__social-ico" viewBox="0 0 16 16" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M3.25 11.5a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5z"/><path d="M2 6.75A.75.75 0 0 1 2.75 6 8.25 8.25 0 0 1 11 14.25a.75.75 0 0 1-1.5 0A6.75 6.75 0 0 0 2.75 7.5.75.75 0 0 1 2 6.75z"/><path d="M2 2.75A.75.75 0 0 1 2.75 2 12.25 12.25 0 0 1 15 14.25a.75.75 0 0 1-1.5 0A10.75 10.75 0 0 0 2.75 3.5.75.75 0 0 1 2 2.75z"/></svg>
+                Blog
+              </a>
             </div>
-            <a class="btn btn--ghost contact__resume" href="#" download>📄 이력서 PDF 다운로드</a>
           </div>
 
           <form class="contact__form reveal" data-reveal data-reveal-delay="120" id="contact-form" novalidate>
@@ -226,7 +223,7 @@
 
   <footer class="footer">
     <div class="container footer__inner">
-      <p>© <span id="year"></span> 박서영. Built with care &amp; vanilla JS.</p>
+      <p>© <span id="year"></span> 박서영.</p>
       <a href="#home" class="footer__top" aria-label="맨 위로">↑ Top</a>
     </div>
   </footer>

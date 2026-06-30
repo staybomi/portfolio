@@ -481,16 +481,15 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: 40px;
-  align-items: start;
+  align-items: center;
 }
 .about__bio p { color: var(--text-dim); margin-bottom: 16px; font-size: 16px; }
 .about__bio strong { color: var(--text); font-weight: 700; }
 
 .about__values {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
-  margin-top: 28px;
 }
 .about__value {
   background: var(--surface);
@@ -517,30 +516,32 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 }
 
 /* Skills */
-.skills { display: flex; flex-direction: column; gap: 16px; }
-.skill__head {
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+  gap: 10px;
+  list-style: none;
+}
+.skill-card {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 8px;
   font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 8px;
-}
-.skill__head span:last-child { color: var(--text-faint); }
-.skill__bar {
-  height: 8px;
-  border-radius: 999px;
+  font-weight: 600;
+  text-align: center;
   background: var(--surface-2);
-  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color 0.2s var(--ease), transform 0.2s var(--ease),
+    color 0.2s var(--ease), box-shadow 0.2s var(--ease);
 }
-.skill__bar i {
-  display: block;
-  height: 100%;
-  width: 0;
-  border-radius: 999px;
-  background: var(--grad);
-  transition: width 1.1s var(--ease);
+.skill-card:hover {
+  border-color: var(--primary-2);
+  color: var(--primary-2);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-glow);
 }
-.skill__bar.is-shown i { width: var(--lvl); }
 
 /* Timeline */
 .timeline { position: relative; padding-left: 22px; }
@@ -598,7 +599,10 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .contact__socials { display: flex; gap: 10px; flex-wrap: wrap; }
 .contact__socials a {
   flex: 1;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   min-width: 90px;
   padding: 12px;
   font-size: 14px;
@@ -609,7 +613,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   transition: border-color 0.2s var(--ease), color 0.2s var(--ease);
 }
 .contact__socials a:hover { border-color: var(--primary-2); color: var(--primary-2); }
-.contact__resume { margin-top: 6px; }
+.contact__social-ico { flex-shrink: 0; }
 
 .contact__form {
   background: var(--surface);
@@ -778,7 +782,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 @media (max-width: 980px) {
   .about__grid,
   .contact__grid { grid-template-columns: 1fr; }
-  .about__values { grid-template-columns: repeat(3, 1fr); }
+  .about__values { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 760px) {
