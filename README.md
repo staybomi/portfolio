@@ -1,8 +1,3 @@
-# 박서영 · Frontend Developer 포트폴리오
-
-인터랙티브 3D 포트폴리오 [david-hckh.com](https://david-hckh.com)의 무드(크림 페이퍼 · 딥네이비 홀로그램 · 오렌지 CTA · 스티커 뱃지 · 부드러운 스크롤)를
-참고해 **Next.js로 리뉴얼**한 개인 포트폴리오입니다. 3D 에셋은 저작권상 재사용하지 않고, 레이아웃·모션·타이포 감성만 CSS/2D로 새로 구현했습니다.
-
 ## 기술 스택
 
 - **Next.js 16** (App Router) · **React 19** · **TypeScript**
